@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground"
+    tools:context=".LATESignalFinderActivityNoticeUncertainty">
+
+    <TextView
+        android:id="@+id/activity_uncertainty_notice_title_ui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textColor="@color/textcolor1"
+        android:text="@string/activity_uncertainty_notice_title_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/activity_uncertainty_notice_body_ui"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/textcolorWhite"
+        android:layout_marginTop="10dp"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/activity_uncertainty_notice_title_ui"
+        android:scrollbars="vertical"
+        android:layout_above="@+id/adView"
+        android:layout_marginBottom="10dp"
+        android:text="@string/activity_uncertainty_notice_body_text" />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="LARGE_BANNER"
+        ads:adUnitId="@string/AdMob_BannerAd_ID" />
+
+</RelativeLayout>
